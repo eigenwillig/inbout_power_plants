@@ -1,0 +1,4 @@
+Data harvested from "http://www.industryabout.com":http://www.industryabout.com/energy/ about all kind of power plants.
+Intended to be used to assess data in "Enipedia":http://enipedia.tudelft.nl/wiki/Portal:Power_Plants
+
+This is currently not scheduled due to increased site load on the industryabout server. 
