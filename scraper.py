@@ -206,36 +206,9 @@ preferredTermsLookup = createPreferredTermsDict()
 
 #split in chunks to avoid reaching execution time limit
 
-section = scraperwiki.sqlite.get_var('section', 2)
+section = scraperwiki.sqlite.get_var('section', 0)
 
 if section == 0:
-    home = "http://www.industryabout.com/energy/fossil-fuels-energy"
+    home = "https://www.industryabout.com/world-fossil-fuels-energy-map"
     parseCategoryPage(home, 'powerplants')
-    home = "http://industryabout.com/chemical-industry/oil-refineries"
-    parseCategoryPage(home, 'refineries')
     scraperwiki.sqlite.save_var('section', 1)
-
-elif section == 1:
-    home = "http://www.industryabout.com/energy/hydro-power"
-    parseCategoryPage(home, 'powerplants')
-    scraperwiki.sqlite.save_var('section', 2)
-
-elif section == 2:
-    home = "http://www.industryabout.com/energy/biomass-energy"
-    parseCategoryPage(home, 'powerplants')
-    home = "http://www.industryabout.com/energy/geothermal-energy"
-    parseCategoryPage(home, 'powerplants')
-    home = "http://www.industryabout.com/energy/nuclear-energy"
-    parseCategoryPage(home, 'powerplants')
-    home = "http://www.industryabout.com/energy/solar-energy"
-    parseCategoryPage(home, 'powerplants')
-    home = "http://www.industryabout.com/energy/tidal-a-wave-energy"
-    parseCategoryPage(home, 'powerplants')
-    home = "http://www.industryabout.com/energy/waste-to-energy"
-    parseCategoryPage(home, 'powerplants')
-    home = "http://www.industryabout.com/energy/wind-energy"
-    parseCategoryPage(home, 'powerplants')
-    scraperwiki.sqlite.save_var('section', 0)
-
-
-
